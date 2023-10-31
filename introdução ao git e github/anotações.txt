@@ -1,0 +1,56 @@
+> Configurações
+
+- git config --global init.defaultBranch nome // define o nome da branch padrão
+- git config credential.helper store // para salvar um token usando github
+- git config --global --show-origin credential.helper // mostra o lugar que foi armazenado
+- git config --global --list // configurações
+
+> Clonar ou Iniciar um novo repositorio
+
+- git init // para criar um repositorio
+- git clone (url) nome // se você quiser poderá dar um nome desejado ao repositório clonado
+- git remote -v // mostra os repositorios remotos que vc está vinculado
+- git remote add (name) (url) // usar o nome "origin" por padrão -- a url é do github (crie o repositorio remoto por lá e vincule no git com esse comando)
+- git clone URL --branch nome --single-branch // para clonar alguma branch especifica do github -- se n passar o nome da branch, ele vai clonar a branch padrão
+
+> Salvar alterações no repositorio local
+
+- git status // mostra o status da arvore de trabalho -- arquivos que n estão salvos no git
+- git reflog // historico detalhado das alteraçoes feitas
+
+- git add nome // adiciona o arquivo na area de preparação "use um . ao invés do nome para add todos os arquivos"
+- git commit -m"mensagem que quiser" // cria um commit
+- git log // exibe o commit
+
+> Desfazer alterações no repositorio local
+
+- git restore arquivo // restaura um arquivo para a ultima modificação salva dele
+- git restore --staged arquivo // 
+- git commit --amend -m"nova mensagem" // altera a mensagem do ultimo commit feito
+- git commit --amend // abre um editor "ver mais sobre isso"
+- git reset --soft restDoCommit // retorna os commits posteriores a esse especificado para a area de preparação
+- git reset --mixed restDoCommit // retorna os commits posteriores a esse especificado para a area de trabalho "mixed é o padrão"
+- git reset --hard restDoCommit // apaga os arquivos de commits posteriores a esse especificado
+
+> Enviando e baixando alterações com o repositorio remoto
+
+- git push -u nome(padrão: origin) branch // envia as alterações para o repositorio remoto (ver para que serve o -u)
+- git pull // puxa as alterações do repositorio remoto e mescla com o repositorio local
+
+> Trabalhando com branches
+
+- git checkout -b nome // criar uma nova branch e troca para ela
+- git checkout nome // troca para essa branch
+- git branch -v // mostra os ultimos commits de cada branch
+- git merge nome // mescla as branches
+- git branch // mostra as branches do repositorio
+- git branch -d nome // excluir a branch
+
+- git fetch origin(repositorio) main(branch) // usar para baixar os arquivos do repositorio remoto para o repositorio local, sem alterar o local
+- git diff main origin/main // usar para ver a diferença entre as branches
+- git merge origin/main // baixa os arquivos
+
+- git stash // vai arquivar uma modificação
+- git stash list // lista a modificação que tem arquivada -- assim pode criar uma nova branch sem levar esses arquivos para lá
+- git stash apply // para trazer os arquivos de volta
+- git stash pop // ?
