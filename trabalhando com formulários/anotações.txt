@@ -1,0 +1,2 @@
+* input type="checkbox"
+- definir o atributo "name" com um par de colchetes no final, exp: opcional[], assim quando os valores forem mandados para o back-end ele será reconhecido como uma lista de valores, caso contrário ele pegara apenas o ultimo valor do campo
