@@ -1,0 +1,9 @@
+* tags semânticas
+
+<i> // citar termos regionais
+<strong> // dar ênfase
+<u> // sublinhado
+<mark> // marcar uma parte do texto
+<sup> //
+<sub> //
+<blockquote> // fazer uma citação

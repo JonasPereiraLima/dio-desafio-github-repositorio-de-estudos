@@ -1,0 +1,22 @@
+* Algumas formas de usar os seletores de atributos para estilizar uma página
+
+[attr]
+- Representa um elemento com atributo de nome attr.
+
+[attr=value]
+- Representa um elemento com um atributo de nome attr, o qual o valor é exatamente value.
+
+[attr~=value]
+- Representa um elemento com um atributo de nome attr, o qual value é uma lista de palavras separadas por espaços, e uma dessas é exatamente value.
+
+[attr|=value]
+- Representa um elemento com um atributo de nome attr o qual o valor pode ser exatamente value ou pode começar com value imediatamente seguido por hífen - (U+002D). Isso somente é usado para linguagens que combinam sub-códigos.
+
+[attr^=value]
+- Representa um elemento com um atributo com nome attr que tem um valor prefixado (precedido) por value.
+
+[attr$=value]
+- Representa um elemento com um atributo de nome attr que tem como sufixo (seguido) por value.
+
+[attr*=value]
+- Representa um elemento com um atributo de nome attr o qual valor contém ao menos uma ocorrência de value contido na string.
