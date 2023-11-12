@@ -1,0 +1,29 @@
+* text-transform
+- define quais caracteres vão estar em maiúsculo, minúsculo, etc.
+
+* text-decoration
+- adiciona ou remove linhas do texto
+
+* text-ident
+- define o recuo da primeira linha do texto
+
+* letter-spacing
+- adiciona um espaçamento entre cada caractere do texto
+
+* word-spacing
+- adiciona um espaçamento entre cada palavra do texto
+
+* white-space
+- define como os espaços em branco do texto de um determinado elemento é tratado
+
+* word-wrap
+- definir se uma palavra será quebrada para a linha de baixo ou se ela vai ultrapassar os limites do elemento.
+
+* word-break
+- define quando o texto deve ter uma quebra de linha.
+
+* writing-mode
+- define a orientação do texto (vertical ou horizontal).
+
+* text-overflow
+- difine como vai mostra para o usuário que existe mais conteúdo de texto do que oque ele pode ver naquele momento

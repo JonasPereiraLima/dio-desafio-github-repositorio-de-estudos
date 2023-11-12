@@ -1,0 +1,33 @@
+* A object-fit propriedade é especificada como uma única palavra-chave escolhida na lista de valores abaixo.
+
+* Valores
+contain
+- O conteúdo substituído é dimensionado para manter sua proporção enquanto cabe na caixa de conteúdo do elemento. Todo o objeto é feito para preencher a caixa, preservando sua proporção, de modo que o objeto ficará "letterbox" se sua proporção não corresponder à proporção da caixa.
+
+cover
+- O conteúdo substituído é dimensionado para manter sua proporção enquanto preenche toda a caixa de conteúdo do elemento. Se a proporção do objeto não corresponder à proporção da sua caixa, o objeto será cortado para caber.
+
+fill
+- O conteúdo substituído é dimensionado para preencher a caixa de conteúdo do elemento. O objeto inteiro preencherá completamente a caixa. Se a proporção do objeto não corresponder à proporção da sua caixa, o objeto será esticado para caber.
+
+none
+- O conteúdo substituído não é redimensionado.
+
+scale-down
+- O conteúdo é dimensionado como se none fosse contain especificado, o que resultaria em um tamanho de objeto concreto menor.
+
+
+* CSS
+
+object-fit: contain;
+object-fit: cover;
+object-fit: fill;
+object-fit: none;
+object-fit: scale-down;
+
+/* Global values */
+object-fit: inherit;
+object-fit: initial;
+object-fit: revert;
+object-fit: revert-layer;
+object-fit: unset;

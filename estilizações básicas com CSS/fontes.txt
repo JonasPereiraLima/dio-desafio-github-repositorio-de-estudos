@@ -1,0 +1,16 @@
+* font-face // importar uma fonte no arquivo css
+font-face {
+  font-family: nome; // define o nome da font para usar no arquivo
+  src: local(), url() // o "local" define para primeiro pesquisar a font no computador do usuário, caso não encontre entao vai baixar atravéz da url
+  font-weight: ; // definir este campo de acordo com a font
+  font-style: ;
+  font-stretch: ;
+}
+
+// pode usar várias font-face para definir uma mesma font, mudando apenas os especificadores de acordo com a font (weight, style, stretch).
+
+* font-variant
+* font-stretch
+
+short-hand:
+font: style variant weight size/height family

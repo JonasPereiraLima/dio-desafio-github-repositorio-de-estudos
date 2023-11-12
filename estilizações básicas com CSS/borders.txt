@@ -1,0 +1,5 @@
+* border-image
+
+- short-hand: 
+/* source | slice | width | outset | repeat */
+border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;

@@ -1,0 +1,3 @@
+* filter: drop-shadow();
+- define uma sombra em imagens '.png'.
+- funciona de maneira semelhante ao text-shadow.

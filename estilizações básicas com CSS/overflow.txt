@@ -1,0 +1,2 @@
+* overflow
+- controla como o conteúdo deve ser exibido caso ultrapasse os limites do container.

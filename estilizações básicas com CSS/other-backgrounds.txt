@@ -1,0 +1,5 @@
+* backgrounds úteis
+
+- background-origin
+- background-clip
+- background-blend-mode: multiply; // mescla os backgrounds / pesquisar as outras propriedades

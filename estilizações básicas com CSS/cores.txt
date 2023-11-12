@@ -1,0 +1,14 @@
+* HSL E HSLA
+
+. Hue (matiz): é o grau na roda de cores (de 0 a 360 graus)
+  . 0 ou 360 é vermelho
+  . 120 é verde
+  . 240 é azul
+
+. Saturation (saturação): valor percentual
+  . 0% um tom de cinza
+  . 100% cor total
+
+. Lightness (luminosidade): luminosidade da cor
+  . 0% é preto
+  . 100% é branco
