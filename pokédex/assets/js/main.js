@@ -1,62 +1,92 @@
+const sectionPokemonList = document.querySelector("#section_1");
+const sectionPokemonDetail = document.querySelector("#section_2");
+
 const pokemons = document.querySelector("ol.pokemons");
+let offset = 0;
+let limit = 5;
+const maxRecords = 151;
 
-// buscarInfoDosPokemons(listaDasUrlsDosPokemons);
-
-async function buscarPokemons() {
-  try {
-    const data = await fetch("https://pokeapi.co/api/v2/pokemon");
-    const resposta = await data.json();
-
-    return buscarInfoDosPokemons(resposta.results);
-    // console.log(resposta.results);
-  } catch (error) {
-    console.log(error);
-  } finally {
-    console.log("Tarefa de busca de pokémons finalizada!");
-    // console.log(listaDasUrlsDosPokemons);
-  }
+function convertTypesToLiTypes(types) {
+  return types.map((type) => `<li class="type ${type}">${type}</li>`).join("");
 }
 
-async function buscarInfoDosPokemons(listaDosPokemons) {
-  return listaDosPokemons.map(async (v) => {
-    const data = await fetch(v.url);
-    const resposta = await data.json();
+function convertPokemonToLi(pokemon) {
+  return `
+  <li class="pokemon ${pokemon.type}" onclick="ShowPokemonDetail(${
+    pokemon.number
+  })">
+  <span class="number">#${pokemon.number}</span>
+  <span class="name">${pokemon.name}</span>
+  <div class="detail">
+    <ol class="types">
+      ${convertTypesToLiTypes(pokemon.types)}
+    </ol>
+    <img
+      src="${pokemon.image}"
+      alt="${pokemon.name}"
+    />
+  </div>
+</li>
+  `;
+}
 
-    const liPokemon = document.createElement("li");
-    liPokemon.className = "pokemon";
+function pokemonDetails(pokemonList) {
+  pokemons.innerHTML += pokemonList.map(convertPokemonToLi).join("");
+}
 
-    const spanNumber = document.createElement("span");
-    spanNumber.textContent = "#001";
-    const spanName = document.createElement("span");
-    spanName.textContent = resposta.name;
-    spanNumber.className = "number";
-    spanName.className = "name";
+function loadMorePokemons() {
+  offset += limit;
+  if (offset + limit >= maxRecords) {
+    limit = maxRecords - offset;
+    document.querySelector("button#loadMore").style.display = "none";
+  }
+  getPokemons(offset, limit);
+}
 
-    const divDetail = document.createElement("div");
-    divDetail.className = "detail";
-    const olTypes = document.createElement("ol");
-    olTypes.className = "types";
+function ShowPokemonDetail(pokemonId) {
+  pokemonDisplay(true);
+  const showPokemon = getPokemon(pokemonId);
 
-    // console.log(resposta.types[0].type.name);
-    resposta.types.forEach((info) => {
-      const liType = document.createElement("li");
-      liType.className = "type";
-      liType.textContent = info.type.name;
-      olTypes.appendChild(liType);
+  const imgPokemon = document.querySelector("#pokemon-img img");
+  const img = document.createElement("img");
+  const pokemonName = document.querySelector("div.pokemon-name h2");
+  const pokemonNumber = document.querySelector("div.pokemon-name span");
+
+  const olTypes = document.querySelector("#typesList");
+  const weight = document.querySelector("#weight");
+  const height = document.querySelector("#height");
+
+  sectionPokemonDetail.className = "pokemon-conteiner";
+  sectionPokemonDetail.classList.add(showPokemon.type);
+
+  imgPokemon.src = showPokemon.image;
+  imgPokemon.alt = showPokemon.name;
+
+  pokemonName.textContent = showPokemon.name;
+  pokemonNumber.textContent = "#" + showPokemon.number;
+
+  olTypes.innerHTML = convertTypesToLiTypes(showPokemon.types);
+  weight.textContent = showPokemon.weight + " kg";
+  height.textContent = showPokemon.height + " m";
+
+  setStatus(showPokemon.stats);
+}
+
+function setStatus(pokemonStats) {
+  const stats = document.querySelectorAll("div.stats > div > div > input");
+  pokemonStats.forEach((pokemonStat) => {
+    stats.forEach((stat) => {
+      if (stat.id === pokemonStat.name) stat.value = pokemonStat.base_stat;
     });
-
-    const img = document.createElement("img");
-    img.src = resposta.sprites.other.dream_world.front_default;
-    img.alt = resposta.name;
-
-    divDetail.appendChild(olTypes);
-    divDetail.appendChild(img);
-
-    liPokemon.appendChild(spanNumber);
-    liPokemon.appendChild(spanName);
-    liPokemon.appendChild(divDetail);
-    pokemons.appendChild(liPokemon);
   });
 }
 
-const listaPokemons = buscarPokemons();
+function pokemonDisplay(value) {
+  if (value) {
+    sectionPokemonDetail.style.display = "flex";
+    sectionPokemonList.style.display = "none";
+  } else if (!value) {
+    sectionPokemonDetail.style.display = "none";
+    sectionPokemonList.style.display = "block";
+  }
+}

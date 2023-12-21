@@ -9,14 +9,34 @@
 }
 
 body {
-  background-color: #f6f8fc;
+  background-color: #d2d4d8;
 }
 
 .content {
   padding: 1rem;
   margin: 0 auto;
   background-color: white;
-  /* background-color: black;  */
+}
+
+.pagination {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+#loadMore {
+  background-color: #6c79db;
+  border: none;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.displayNone {
+  display: none;
 }
 
 @media screen and (min-width: 992px) {
