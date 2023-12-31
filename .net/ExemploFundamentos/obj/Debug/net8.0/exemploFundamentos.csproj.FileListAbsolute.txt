@@ -1,0 +1,15 @@
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\bin\Debug\net8.0\exemploFundamentos.exe
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\bin\Debug\net8.0\exemploFundamentos.deps.json
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\bin\Debug\net8.0\exemploFundamentos.runtimeconfig.json
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\bin\Debug\net8.0\exemploFundamentos.dll
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\bin\Debug\net8.0\exemploFundamentos.pdb
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\exemploFundamentos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\exemploFundamentos.AssemblyInfoInputs.cache
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\exemploFundamentos.AssemblyInfo.cs
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\exemploFundamentos.csproj.CoreCompileInputs.cache
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\exemploFundamentos.sourcelink.json
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\exemploFundamentos.dll
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\refint\exemploFundamentos.dll
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\exemploFundamentos.pdb
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\exemploFundamentos.genruntimeconfig.cache
+C:\Users\Jonas\Documents\Coisas\DIO\desafios\dio-desafio-github-repositorio-de-estudos\.net\exemploFundamentos\obj\Debug\net8.0\ref\exemploFundamentos.dll
