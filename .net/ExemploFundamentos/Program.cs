@@ -4,26 +4,52 @@ using exemploFundamentos.models;
 
 
 
+double quilometrosPorDia = double.Parse(Console.ReadLine());
+int horasDeEletronicos = int.Parse(Console.ReadLine());
+int refeicoesComCarne = int.Parse(Console.ReadLine());
 
-List<string> listaString = new List<string>();
-listaString.Add("Jonas");
-listaString.Add("Pereira");
-listaString.Add("Lima");
+double pegadaDeCarbono = CalcularPegadaDeCarbono(quilometrosPorDia, horasDeEletronicos, refeicoesComCarne);
 
-foreach(string nome in listaString)
-{
-  Console.Write(nome + " ");
-}
-
-
+static double CalcularPegadaDeCarbono(double quilometrosPorDia, int horasDeEletronicos, int refeicoesComCarne)
+    {
+      return (quilometrosPorDia * 365 * 0.2) + (horasDeEletronicos * 0.1) + (refeicoesComCarne * 0.5);
+    }
 
 
+
+
+
+
+
+
+
+
+// List<string> listaString = new List<string>();
+// listaString.Add("Jonas");
+// listaString.Add("Pereira");
+// listaString.Add("Lima");
+
+// foreach(string nome in listaString)
+// {
+//   Console.Write(nome + " ");
+// }
+
+
+
+// string[] strs = new string[4];
+// strs[0] = "1";
+// strs[1] = "2";
+// strs[2] = "3";
+// strs[3] = "4";
+
+// Console.WriteLine(String.Join(", ", strs));
 
 // int[] arrayInteiros = new int[3];
 // arrayInteiros[0] = 25;
 // Array.Resize(ref arrayInteiros, arrayInteiros.Length*2);
 // int[] arrayInteirosDobrado = new int[arrayInteiros.Length*2];
 // Array.Copy(arrayInteiros, arrayInteirosDobrado, arrayInteiros.Length);
+
 
 // foreach(int valor in arrayInteiros)
 // {
