@@ -1,19 +1,44 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.ComponentModel;
 using exemploFundamentos.models;
 
 
 
-double quilometrosPorDia = double.Parse(Console.ReadLine());
-int horasDeEletronicos = int.Parse(Console.ReadLine());
-int refeicoesComCarne = int.Parse(Console.ReadLine());
+string velocidades = "ADADAD".ToUpper();
+for(int i = 0; i < velocidades.Length; i++)
+{
+  switch(velocidades[i].ToString())
+  {
+    case "A":
+      Console.WriteLine("a");
+      break;
+    case "D":
+      Console.WriteLine("b");
+      break;
+  }
+  
+}
+// Console.WriteLine(velocidades);
+// Console.WriteLine(velocidades[0]);
 
-double pegadaDeCarbono = CalcularPegadaDeCarbono(quilometrosPorDia, horasDeEletronicos, refeicoesComCarne);
 
-static double CalcularPegadaDeCarbono(double quilometrosPorDia, int horasDeEletronicos, int refeicoesComCarne)
-    {
-      return (quilometrosPorDia * 365 * 0.2) + (horasDeEletronicos * 0.1) + (refeicoesComCarne * 0.5);
-    }
+
+
+
+
+
+
+// double quilometrosPorDia = double.Parse(Console.ReadLine());
+// int horasDeEletronicos = int.Parse(Console.ReadLine());
+// int refeicoesComCarne = int.Parse(Console.ReadLine());
+
+// double pegadaDeCarbono = CalcularPegadaDeCarbono(quilometrosPorDia, horasDeEletronicos, refeicoesComCarne);
+
+// static double CalcularPegadaDeCarbono(double quilometrosPorDia, int horasDeEletronicos, int refeicoesComCarne)
+//     {
+//       return (quilometrosPorDia * 365 * 0.2) + (horasDeEletronicos * 0.1) + (refeicoesComCarne * 0.5);
+//     }
 
 
 
